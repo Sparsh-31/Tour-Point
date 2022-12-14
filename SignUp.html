@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-image: url("https://etravelfly.com/wp-content/uploads/2019/01/munnar-package-29.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            font-family: sans-serif;
+        }
+        #main{
+            display: flex;
+            justify-content:space-evenly;
+        }
+        #sign-up{
+            width: 300px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+            /* margin-top: 500px; */
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            margin-top: 15%;
+            margin-left: 5%;
+            text-align: center;
+            border-radius: 10px;
+           
+        }
+        .input-box{
+            width: 80%;
+            height: 40px;
+            margin: 10px;
+            border:groove;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+        hr{
+            margin: 10px 5px;
+        }
+        form{
+            height: 80%;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            color: aliceblue;
+            background-color: rgb(143, 143, 180);
+            border: none;
+            border-radius: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #div2{
+            padding-top: 15%;
+            font-size: 100px;
+            color: rgb(39, 195, 143);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="sign-up">
+        <h1>Sign-Up</h1>
+        <form >    
+            <input type="email" class="input-box" placeholder="Your Email">
+            <input type="password" class="input-box" placeholder="Your Password">
+            <p><span><input type="checkbox"></span>I agree to the terms of services</p>
+            <button type="button" class="sign-up-btn">Sign Up</button>
+            <hr>
+            <p class="or"> OR </p>
+            <button type="button" class="sign-up-btn">Login with twitter</button>
+            <p>Do you have an account ? <a href="./SignIn.html">Sign-In</a></p>        
+        </form>
+    </div>
+    <div id="div2">
+        <p>Plan <br>
+            _Your <br>
+            __Journey
+        </p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+
+            /* border: 1px solid rebeccapurple; */
+        }
+    #myDiv {
+       background-image: url('https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg');
+       background-position: center;
+       background-size: cover;
+       box-sizing:content-box;
+       height: 300px;
+       width: 100%;
+       height: 100%;
+       /* border: 0.2px solid red ; */
+       padding-top: 0.5%;
+    }
+    #sin:hover{
+        cursor:pointer ;
+    }
+    #nav>ul{
+        margin: 1% 5%;
+        display: inline-flex;
+        gap: 20px;
+    }
+    li{
+        color: rgb(249, 249, 249);
+        display: inline;
+        /* margin: 20px 5px; */
+        font-size: 20px;
+        /* border: 1px solid blueviolet; */
+        text-align: center;
+
+    }
+    #nav{
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+       justify-content: space-between;
+       /* padding: ; */
+    }
+    #nav::-webkit-scrollbar{
+        background-color: aqua;
+    }
+    #nav>img{
+        /* display: inline; */
+        height: 100px;
+        margin-left: 2%;
+        
+    }
+    #pack{
+        margin-left: 5px;
+    }
+    input{
+        display:inline-block;
+        margin: auto;
+        width: 65%;
+        height: 50px;
+        margin-bottom: 100px;
+    }
+    #head{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: 50px;
+        /* border: 1px solid red; */
+    }
+    
+    #seacrch{
+        width: 80%;
+        margin: auto;
+        /* border: 1px solid red; */
+        align-items:flex-end;
+        padding-left: 24%;
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+    a{
+        display: block;
+        text-align:justify;
+    }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+    
+    <nav id="nav">
+        <img src="C:\Users\kotwa\OneDrive\Pictures\Point-removebg-preview.png" alt="" >
+        <ul>
+            <li>Inspiration </li>
+            <li>Forum</li>
+            <li>Packages</li>
+            <li>Public Trip</li>
+            <li onclick="newDoc()" id="sin">Sign in</li>
+        </ul>
+    </nav>
+    <h1 id="head">India's Largest Community of Travellers</h1>
+    <div id="seacrch">
+    <input type="text" placeholder="Search for itineraries, destinations, hotels or activities" >
+    <button type="submit" style="margin: 6px; padding: 12px; border-radius: 50%;"><img src="https://www.freepnglogos.com/uploads/search-png/search-icon-clip-art-clkerm-vector-clip-art-online-22.png" alt="Search" style="height: 16px; width: 17px;"></butto>   
+</div>
+</div>
+<a href="">Sponsored</a>
+<img src="https://tpc.googlesyndication.com/simgad/968686610659141041" alt=""> 
+
+
+
+</body>
+<script>
+function newDoc() {
+  window.location.assign("./SignIn.html")
+}
+</script>
+</html>
