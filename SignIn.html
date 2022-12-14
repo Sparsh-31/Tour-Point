@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/07/20/79/07.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            font-family: sans-serif;
+        }
+        #main{
+            display: flex;
+            justify-content:space-evenly;
+        }
+        #sign-in{
+            width: 300px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+            /* margin-top: 500px; */
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            margin-top: 15%;
+            margin-left: 5%;
+            text-align: center;
+            border-radius: 10px;
+           
+        }
+        /* input{
+            display: block;
+        } */
+        .input-box{
+            width: 80%;
+            height: 40px;
+            margin: 10px;
+            border:groove;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+        hr{
+            margin: 10px 5px;
+        }
+        form{
+            height: 80%;
+        }
+        a{
+            text-decoration: none;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            color: aliceblue;
+            background-color: rgb(143, 143, 180);
+            border: none;
+            border-radius: 5px;
+        }
+        #div2{
+            padding-top: 15%;
+            font-size: 100px;
+            color: rgb(243, 199, 105);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="sign-in">
+        <h1>Sign-In</h1>
+        <form >    
+            <input type="email" class="input-box" placeholder="Your Email">
+            <input type="password" class="input-box" placeholder="Your Password">
+            <p><span><input type="checkbox"></span>I agree to the terms of services</p>
+            <button type="button" class="sign-up-btn"> Sign In </button>
+            <hr>
+            <p> OR <a href="./SignUp.html">Sign-Up</a></p>
+        </form>
+    </div>
+    <div id="div2">
+        <p>Plan <br>
+            _Your <br>
+            __Journey
+        </p>
+    </div>
+    </div>
+</body>
+<script>
+    function signUpPage(){
+        window.location.assign("file:///C:/Users/kotwa/OneDrive/Desktop/just-mitten-4298/SignUp.html")
+    }
+</script>
+</html>
