@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Tour Point</title>
     <style>
         *{
             margin: 0px;
@@ -14,7 +14,7 @@
             width: 100%;
             height: 100%;
 
-            /* border: 1px solid rebeccapurple; */
+            /* border: 10px solid rebeccapurple; */
         }
     #myDiv {
        background-image: url('https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg');
@@ -79,25 +79,127 @@
     }
     
     #seacrch{
-        width: 80%;
+        width: 70%;
         margin: auto;
         /* border: 1px solid red; */
         align-items:flex-end;
         padding-left: 24%;
     }
+
+
+    /* sponsered */
     img{
         display: block;
         margin: auto;
+
     }
-    a{
+    #sponser{
         display: block;
-        text-align:justify;
+        margin-left: 15%;
+        text-decoration: none;
+        color: rgb(122, 134, 244);
+    }
+    #sponser:hover{
+        color: crimson;
+        cursor: pointer;
+    }
+    
+    .four-fectors{
+        width: 80%;
+        /* margin-top: 50px; */
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .four-fectors img{
+        width: 100%;
+    }
+    .sponserImg{
+        margin-bottom: 50px;
+    }
+
+    /* patnership */
+    #patnership-main{
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #patnership-main>h1{
+        margin-bottom: 20px;
+    }
+    #patnership img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+    }
+    /* .carousel-cell {
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+    .carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+} */
+    #patnership>div{
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    }
+    #patnership{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    }
+    #patnership h5{
+        color: rgb(246, 169, 27);
+        margin-top: 5px;
+        margin-bottom: 8px;
+    }
+
+    /* Slide Images */
+    #slide{
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+    #slide>img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Best Places */
+    #best_places-main{
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #best_places{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #best_places img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+    }
+    #best_places h3{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     </style>
 </head>
 <body>
-    <div id="myDiv">
-    
+    <!-- banner part -->
+    <div id="myDiv">   
     <nav id="nav">
         <img src="C:\Users\kotwa\OneDrive\Pictures\Point-removebg-preview.png" alt="" >
         <ul>
@@ -114,15 +216,186 @@
     <button type="submit" style="margin: 6px; padding: 12px; border-radius: 50%;"><img src="https://www.freepnglogos.com/uploads/search-png/search-icon-clip-art-clkerm-vector-clip-art-online-22.png" alt="Search" style="height: 16px; width: 17px;"></butto>   
 </div>
 </div>
-<a href="">Sponsored</a>
-<img src="https://tpc.googlesyndication.com/simgad/968686610659141041" alt=""> 
+
+<!-- Sponsored tag and image -->
+<a href="" id="sponser">Sponsored</a>
+<img src="https://tpc.googlesyndication.com/simgad/968686610659141041" alt="" class="sponserImg">  
+
+
+<!-- 4 div language mindful-retreats online-exper. tripoto-family  -->
+
+<div class="four-fectors">
+    <div class="four">
+       <img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192329_aa.png" alt="">
+    </div>
+    <div class="four">
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192307_cc.png" alt="">
+     </div>
+     <div class="four">
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192273_bb.png" alt="">
+     </div>
+     <div class="four">
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192344_dd.png" alt="">
+     </div>   
+</div>
+
+<!-- Spotlight-Partnerships -->
+<div id="patnership-main">
+    <h1>In the Spotlight: Partnerships</h1>
+    <div id="patnership"></div>
+</div>
+
+<!-- Slide-Images -->
+<a href="https://theholidaypoint.com/img/golden-triangle-tours.jpg">
+<div id="slide"></div></a>
+
+<!-- Find Best Places to Visit in India in December & January -->
+
+<div id="best_places-main">
+    <h1>Find Best Places to Visit in India in December & January</h1>
+    <div id="best_places">
+        <!-- 1 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666949651_1636600759_110.png" alt="">
+        <h3>10 Best Places To Experience The Chills This Winter</h3>
+        <p>By  <a href="">Kadambari Bhatte</a></p>
+    </div>
+    <!-- 2 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666949736_1635179153_pahalgam_gulmarg.jpeg" alt="">
+        <h3>15 Winter Destinations, That are Not Shimla or Manali</h3>
+        <p>By  <a href="">Karishma Shaikh</a></p>
+    </div>
+    <!-- 3 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666949651_1636600759_110.png" alt="">
+        <h3>12 Hot Springs in India That Will Warm You Up This Winter</h3>
+        <p>By  <a href="">Disha Kapkoti</a></p>
+    </div>
+    <!-- 4 -->
+    <div>
+        <img src="https://static2.tripoto.com/media/filter/tst/img/192200/TripDocument/1571216585_adrithcollage.jpg" alt="">
+        <h3>Trips to Take with Your Bae This Winter in India</h3>
+        <p>By  <a href="">Mouna Nanaiah</a></p>
+    </div>
+    <!-- 5 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666950604_1666207073_hornbill_festival_pix_by_vikramjit_kakati.jpg" alt="">
+        <h3>Nagaland's Hornbill Festival is Back this December</h3>
+        <p>By  <a href="">Shruti Singh</a></p>
+    </div>
+    <!-- 6 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1669621772_1479799117_19594481674_73bfdd5e4a_z.jpg" alt="">
+        <h3>26 Best Places In India To Visit This December</h3>
+        <p>By  <a href="">Pritha Puri</a></p>
+    </div>
+    <!-- 7 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1669615182_1669300591_snip20220609_1_1024x573.png" alt="">
+        <h3>10 Events You Cannot Miss to Attend if You Are in Delhi</h3>
+        <p>By  <a href="">Tanisha Mundra</a></p>
+    </div>
+    <!-- 8 -->
+    <div>
+        <img src="https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1669632229_1635615472_picsart_10_30_11_07_24.jpg" alt="">
+        <h3>10 Recommended Destinations for Solo Travelers for This Winter</h3>
+        <p>By  <a href="">Srishti</a></p>
+    </div>
+</div>
+</div>
 
 
 
 </body>
 <script>
+    // patners
+    let pcontainer = document.getElementById("patnership");
+    let patner = [
+        //1
+         {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1670839402_2020_rws_acw_kv3_sharktank_4355_lr.jpg",
+         "title": "Resorts World Sentosa",
+         "discription": "These Thrilling Experiences in Resorts World™ Sentosa Will Have You Booking a Trip to Singapore"},
+        //2
+          {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1653562686_275721311_336154091889496_2451172917242741439_n.jpg",
+          "title": "Singapore Tourism Board",
+          "discription": "Visit These 7 Chic Bars in Singapore if You’re in the Mood to Live up the Night!"},
+                //3 Incompleted from here;
+          {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1670586190_image_20221209_165038_253_1.jpg",
+          "title": "Resorts World Sentosa",
+          "discription": "A Curated Guide to the Incredible Attractions of Resorts World Sentosa, Singapore"},
+                 //4
+          {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1671021501_activity_scuba_diving_in_oman_1.jpg",
+          "title": "Oman Tourism",
+          "discription": "Just 3 Hours Away, Oman Is the Trending International Destination Every Indian Must Visit!"},
+                 //5
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1660808085_shutterstock_1611239635_min.jpg",
+          "title": "Saudi Tourism Authority",
+          "discription": "This Quiz on Saudi Will Help You Design Your Best Adventure!"},
+                 //6
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1663242404_1662994966_gostops_ooty_1.jpg",
+          "title": "Gostops",
+          "discription": "This Hostel Is a 100-Year-Old Colonial Bungalow Set in the Scenic Western Ghats"},
+                 //7
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1666862339_1666247652_26_4o693h3.jpg",
+          "title": "Gostops",
+          "discription": "These Gorgeous goSTOPS Hostels are Perfect for Those Looking To Celebrate a Green Diwali"},
+                 //8
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1659354694_yaopey_yong_flmptucjkto_unsplash.jpg",
+          "title": "Amber-Student",
+          "discription": "Student in London? Here’s Your Guide to Affordable and Exciting Ways to Explore The City!"},
+                 //9
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1661937030_manali_5_1.jpg",
+          "title": "Gostops",
+          "discription": "9 Hours From Delhi, This goSTOPS Hostel in Manali Offers Spectacular Views With a Dose of Fun"},
+                 //10
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1660817736_078_commonarea_07_min.jpg",
+          "title": "Gostops",
+          "discription": "Experience the Best of Monsoon With These Trendy goSTOPS Stays Under Rs 2,000"},
+                 //11
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1660310642_j_1.jpg",
+          "title": "Niyo Global",
+          "discription": "India's Top Travel Influencers Share Their Best Secrets for Budget International Trips!"},
+                 //12
+                 {"img": "https://cdn1.tripoto.com/media/filter/tst/img/1516992/Image/1660807748_shutterstock_1876968394_1_min.jpg",
+          "title": "Saudi Tourism Authority",
+          "discription": "Offering a Mix of Culture and Modernity, Riyadh Is Perfect for Every Kind of Traveller"}
+        ]
+   
+        patner.forEach((element) => {
+            let card = document.createElement("div")
+            card.setAttribute("class","carousel-cell")
+            let img = document.createElement("img");
+            img.setAttribute("src",element.img);
+            let title = document.createElement("h5");
+            title.innerText = element.title;
+            let disc = document.createElement("p");
+            disc.innerText = element.discription;
+
+            card.append(img,title,disc);
+            pcontainer.append(card);
+        });
+// Slid-Show images
+    let slideArr = [
+        "https://cdn1.tripoto.com/media/filter/nxxl/img/1516992/Image/1670586625_img_0434.jpg",
+                    "https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1669102212_1667974883_web1.jpeg",
+                    "https://cdn1.tripoto.com/media/filter/nxxl/img/2224454/Image/1670482094_homepage_recovered_op2.jpg"];               
+    let index = 0;
+    setInterval(()=>{
+        let img = document.createElement("img");
+        img.setAttribute("src",slideArr[index]);
+        let slide = document.getElementById("slide");
+        slide.innerHTML = null;
+        slide.append(img);
+        index++
+        if(index==3){
+            index = 0;
+        }
+    },2000)            
 function newDoc() {
   window.location.assign("./SignIn.html")
 }
 </script>
 </html>
+
+
