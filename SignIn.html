@@ -23,10 +23,12 @@
         }
         #sign-in{
             width: 300px;
-            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+            /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3); */
             /* margin-top: 500px; */
+            color: white;
+            font-weight: 700;
             padding: 20px;
-            background: rgb(255, 255, 255);
+            background: transparent;
             margin-top: 15%;
             margin-left: 5%;
             text-align: center;
@@ -75,11 +77,11 @@
     <div id="main">
     <div id="sign-in">
         <h1>Sign-In</h1>
-        <form >    
-            <input type="email" class="input-box" placeholder="Your Email">
-            <input type="password" class="input-box" placeholder="Your Password">
+        <form id="form">    
+            <input type="email" class="input-box" id="em" placeholder="Your Email">
+            <input type="password" class="input-box" id="password" placeholder="Your Password">
             <p><span><input type="checkbox"></span>I agree to the terms of services</p>
-            <button type="button" class="sign-up-btn"> Sign In </button>
+            <button type="button" id="sign-up-btn"> Sign In </button>
             <hr>
             <p>For creating a new account  <a href="./SignUp.html">Sign-Up</a></p>
         </form>
@@ -93,8 +95,27 @@
     </div>
 </body>
 <script>
-    function signUpPage(){
-        window.location.assign("file:///C:/Users/kotwa/OneDrive/Desktop/just-mitten-4298/SignUp.html")
-    }
+    let accepted = document.getElementById("sign-up-btn")
+    let myforn = document.getElementById("form");
+    accepted.addEventListener("click",()=>{
+        let arr = JSON.parse(localStorage.getItem("login"))
+        console.log(arr);
+        let obj = {
+            "em": myforn.em.value,
+            "pass" : myforn.password.value
+        }
+        let count = 0;
+        arr.forEach((element) => {
+            if(element.email == obj.em && element.password == obj.pass)
+            count++;
+        });
+        if(count==1){
+            window.location.assign("./home.html")
+        }
+        else{
+            alert("Wrong Cridentials")
+        }
+    })
+
 </script>
 </html>
