@@ -112,7 +112,11 @@
         padding-left: 24%;
     }
 
-
+    #dest{
+        border-radius: 10px;
+        border: 0px;
+        padding-left: 10px;
+    }
     /* sponsered */
     img{
         display: block;
@@ -730,10 +734,12 @@
 // search functionality
 let dest = document.getElementById("dest");
 let destination = document.getElementById("destination");
-
 destination.addEventListener("click",()=>{
-    if(dest.value == Goa || dest.value == goa){
-        window.location.assign("/goa.html")
+    if(dest.value == "Goa" || dest.value == "goa"){
+        window.location.assign("./goa.html")
+    }
+    else if(dest.value == "Manali" || dest.value == "manali"){
+        window.location.assign("./manali.html")
     }
 })
 // signin pages
