@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa</title>
+</head>
+<style>
+    #myDiv{
+        background-color: rgb(120, 255, 152);
+        padding-bottom: 0px;
+
+    }
+    #nav{
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+       justify-content: space-between;
+       
+    }
+    input{
+        display:inline-block;
+        margin: auto;
+        width: 65%;
+        height: 50px;
+        margin-bottom: 100px;
+    }
+    #sin:hover{
+        cursor:pointer ;
+    }
+    #nav>ul{
+        margin: 1% 5%;
+        display: inline-flex;
+        gap: 20px;
+    }
+    li{
+        color: rgb(249, 249, 249);
+        display: inline;
+        /* margin: 20px 5px; */
+        font-size: 20px;
+        /* border: 1px solid blueviolet; */
+        text-align: center;
+
+    }
+
+    #inspiration>ul{
+        display: none;
+        position: absolute;
+    }
+    #inspiration:hover ul{
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+    #dropdown>li{
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: 15px;
+        text-align: left;
+    }
+    #dropdown{
+        display: block;
+        position: absolute;
+        width: 200px;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #nav>a>img{
+        /* display: inline; */
+        height: 100px;
+        margin-left: 50px;
+        
+    }
+    #dest{
+        border-radius: 10px;
+        border: 0px;
+        padding-left: 10px;
+    }
+    #seacrch{
+        width: 70%;
+        margin: auto;
+        margin-bottom: 20px;
+        /* border: 1px solid red; */
+      
+        align-items:flex-end;
+        padding-left: 24%;
+    }
+    #head{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: 50px;
+        /* border: 1px solid red; */
+    }
+    #main{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #pack{
+        padding: 5px 10px;
+        border: 0px;
+        border-radius: 5px;
+        background-color: rgb(120, 255, 152);
+        color: white;
+    }
+    .trip{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+    .trip>div{
+        border-radius: 5px;
+    }
+    .trip>div:hover{
+        background-color: rgb(170, 170, 242);
+    }
+    .trip img{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .trip>div p{
+        color: rgb(252, 197, 94);
+    }
+    .trip>div p:hover{
+        cursor:pointer;
+    }
+    .footer-li li{
+        color: black;
+        display: block;
+        text-align: left;
+    }
+    footer{
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+        padding-left: 25px;
+    }
+    footer>div{
+        width: 20%;
+        text-align: left;
+    }
+    footer li:nth-child(1){
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .logo{
+        margin-right: 50px;
+    }
+    #sponser{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(122, 134, 244);
+    }
+    #sponser:hover{
+        color: crimson;
+        cursor: pointer;
+    }
+    .sponserImg{
+        margin-bottom: 50px;
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div id="myDiv">   
+        <nav id="nav">
+            <a href="./home.html"> <img src="https://i.ibb.co/NLszsRn/Point-removebg-preview.png" alt="" ></a>
+            <ul>
+                <li  id="inspiration">Inspiration           
+                    <ul id="dropdown">
+                        <li>Visit Singapore</li>
+                        <li>Beaches</li>
+                        <li>Mountains</li>
+                        <li>Heritage</li>
+                        <li>Weekend Guide</li>
+                        <li>Upcoming Festivals</li>
+                        <li>Honeymoon Packages</li>
+                        <li>Wildlife Tourism</li>
+                        <li>Road Trips</li>
+                        <li>Getaways Guide</li>
+                        <li>Luxury Travel</li>
+                    </ul>
+            </li>
+                <li>Forum</li>
+                <li>Packages</li>
+                <li>Public Trip</li>
+                <li onclick="newDoc()" id="sin">Log-Out</li>
+            </ul>
+        </nav>
+        <h1 id="head">India's Largest Community of Travellers</h1>
+        <div id="seacrch">
+        <input type="text" placeholder="Search for itineraries, destinations, hotels or activities" id="dest">
+        <button type="submit" id="destination" style="margin: 6px; padding: 12px; border-radius: 50%;"><img src="https://www.freepnglogos.com/uploads/search-png/search-icon-clip-art-clkerm-vector-clip-art-online-22.png" alt="Search" style="height: 16px; width: 17px;"></butto>   
+    </div>
+    </div>
+    <!-- sponsered -->
+    <a href="" id="sponser">Sponsored</a>
+<img src="https://tpc.googlesyndication.com/simgad/968686610659141041" alt="" class="sponserImg">
+    <!-- main -->
+<div id="main">
+        <h1>Goa Tourism and Travel Guide</h1>
+        <p>Famous for its beaches, parties, Portuguese heritage and "Susegad" or relaxed lifestyle, Goa is the smallest state in India in terms of area. Where to go in Goa? When in India’s sunshine state, be prepared to fall in love with sandy beaches, palm-fringed shores and beachfront Portuguese bungalows. Goa will never fail to entice you with its landscapes peppered with paddy fields, coconut groves, windy cliffs and riverside forts. North or South Goa? While South Goa is a haven for tourists seeking quiet days spent by the tranquil seaside, North Goa is known primarily because of its bustling shacks and legendary nightlife. From the umpteen number of places to visit in Goa, a few that most definitely shouldn’t be missed are the Fontainhas – India’s only existing Latin quarters, the 17th century old Bom Jesus Basilica; to revel in a little bohemian spirit, the vibrant Wednesday flea market at Anjuna Beach, and Dudhsagar – one of India’s highest waterfalls. But if you’re here simply to unwind, there’s no dearth of things to enjoy. What to do in Goa? Starting with spotting a dolphin or two at the Palolem beach, marveling at the routinely glorious sunsets at Chapora fort, taking leisurely strolls through the mossy ruins of St. Augustine in Old Goa or simply soaking in the salty tropical breeze with platefuls of butter garlic prawns, bebinca and a few too many rum and cokes, with a side of jazz and Konkani music. Wondering how much a visit to Goa will cost you? Goa tourism has made it easier for all kinds of travellers with a daily budget between Rs.3000 to Rs.5000. If your budget is tighter, read on to see what Goa tourism offers to its budget travellers and also for a fair breakdown of your expenses in Goa.</p>
+        <button id="pack">Get Customised Packages</button>
+        <p> ☀️ <b> Best time to visit:</b> November to February </p>
+
+        <p> 📸 <b> Famous for:</b> Beaches, Nightlife, Parties, Casinos, Waterfalls, Portuguese architecture </p>
+            
+        <p> 💰 <b> Cost: INR 600 </b> - 6000+ per day</p>
+
+
+        <!-- Plan your Goa Trip -->
+        <h1>Plan your Goa Trip</h1>
+        <div class="trip">
+            <!-- 1 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1643442373_1513076541_800px_goa_beautiful_beach.jpg" alt="">
+                <h3>South Goa Or North Goa?</h3>
+            </div>
+              <!-- 2 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1643442599_1486733036_dsc_0153.jpg" alt="">
+                <h3>Guide To Explore South Goa</h3>
+            </div>
+              <!-- 3 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1643442697_1619638453_14.jpg" alt="">
+                <h3>Offbeat Places In North Goa</h3>
+            </div>
+              <!-- 4 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632485500_maxresdefault.jpg" alt="">
+                <h3>Video: Plan A Trip To Goa!</h3>
+            </div>
+        </div>
+        <h1>Best Beaches In Goa</h1>
+        <div class="trip">
+            <!-- 1 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654871196_1651749551_c19186a6231f0734ab863b7122103f2f.jpg" alt="">
+                <h3>Arambol Beach Guide</h3>
+            </div>
+            <!-- 2 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654871204_1653908573_zzz_g42993d4b4_1920.jpg" alt="">
+                <h3>Vagator Beach Guide</h3>
+            </div>
+            <!-- 3 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654871211_1651304516_beach2.jpg" alt="">
+                <h3>Anjuna Beach Guide</h3>
+            </div>
+            <!-- 4 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654870947_1652951591_sunset_1902945_1280.jpg" alt="">
+                <h3>Calangute Beach Guide</h3>
+            </div>
+            <!-- 5 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654871218_1654062467_rohit_tandon_uqjoqj7sqwa_unsplash.jpg" alt="">
+                <h3>Colva Beach Guide</h3>
+            </div>
+            <!-- 6 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654871223_1652178304_butterfly_beach.jpeg" alt="">
+                <h3>Butterfly Beach Guide</h3>
+            </div>
+            <!-- 7 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654871082_1610362200_kako2.jpeg" alt="">
+                <h3>Kakolem Beach Guide</h3>
+            </div>
+            <!-- 8 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1661929481_1656672942_img_7871.jpg" alt="">
+                <h3>5 Sunset Spots In North Goa</h3>
+            </div>
+        </div>
+        <!-- Top Hotels in Goa -->
+        <h1 style="margin-bottom: 0px;">Top Hotels in Goa</h1>
+        <p style="margin-top: 0px;">Our recommendations for best hotels, homestays and resorts in Goa.</p>
+        <div class="trip">
+            <!-- 1 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654870517_1649748774_206382886.jpg" alt="">
+                <h3>Best Places To Stay In Goa</h3>
+            </div>
+            <!-- 2 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1654942483_1654761476_f4a3c9fa_f234_4217_85b5_653e81e2e6ac.jpeg" alt="">
+                <h3>25 Luxurious Resorts In Goa</h3>
+            </div>
+            <!-- 3 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632071139_1631432510_86738e65_950f_4ef5_813e_e1d3f085e905.jpg" alt="">
+                <h3>10 Villas In Goa With A Pool</h3>
+            </div>
+            <!-- 4 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1642228383_1456823637_56805744.jpg" alt="">
+                <h3>10 Affordable Hotels In Goa</h3>
+            </div>
+            <!-- 5 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632071260_1625457592_285221875.jpg" alt="">
+                <p>BUDGET HOSTELS</p>
+                <h3>Hotels In Goa Under 2,050 INR</h3>
+            </div>
+            <!-- 6 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1642236702_1502867071_57743838.jpg" alt="">
+                <p>PROPERTY FOR ALL</p>
+                <h3>Best Budget Stays In Goa</h3>
+            </div>
+            <!-- 7 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1643451971_1454916724_anjuna.jpg" alt="">
+                <p>HOME STAYS</p>
+                <h3>Goa Homestays In 1,500 INR</h3>
+            </div>
+            <!-- 8 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632071021_1630579067_210184318.jpg" alt="">
+                <p>PET-FRIENDLY</p>
+                <h3>Pet Friendly Hotel In Goa</h3>
+            </div>
+            <!-- 9 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632070924_1630056135_38f87857_6644_402c_9334_4ab5920c9ffe.jpg" alt="">
+                <p>HOMESTAY</p>
+                <h3>Tropical Villa In Goa</h3>
+            </div>
+            <!-- 10 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632071273_1618060114_marcus_loke_wqjvwu_hzfo_unsplash.jpg" alt="">
+                <p>BUDGET HOSTELS</p>
+                <h3>Best Hostels In Goa</h3>
+            </div>
+            <!-- 11 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/1789711/Image/1632080112_1612342926_67087062_2879200065484376_7535689325363593216_o.jpg" alt="">
+                <p>ROMANTIC STAY</p>
+                <h3>Villa In Goa With 'Bali' Vibes</h3>
+            </div>
+            <!-- 12 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/2052077/Image/1643453680_1585555195_goa_1050315.jpg" alt="">
+                <p>HERITAGE STAY</p>
+                <h3>Stay At This 100-YO Villa In Goa</h3>
+            </div>
+            
+        </div>  
+
+        <h1 style="margin-top: 50px;">Best Time to Visit Goa</h1>
+        <p>November to February is the best time to visit Goa and explore Goa tourism if you want to enjoy the best part of Goa’s weather.
+
+            Peak season is from mid-November to mid- February when the weather is comfortable, cool and pleasant. Shoulder season is from mid-June to October when Goa tourism is at its most beautiful. The rains come down on the state during these months and while the countryside becomes a lush green, the clubs start brimming with people and raging parties. Off-season is the time between March to May when the temperatures soar and the prices of the hotels and homestays drop. This is the time when Goa tourism is at a low and you may get some quiet days, away from the touristy crowds.
+            
+        </p>
+        <h1 style="margin-top: 50px;">Budget for Goa</h1>
+        <p>For Budget Travellers: INR 600 - 1200 a day
+
+            Accommodation in hostels and guesthouses: INR 200 - 800 (up to INR 1200 in peak season)
+            Food in beach shacks and street eateries: INR 200 - 400
+            Public Transport in buses and autorickshaws: INR 8 - 40
+            Motorbike rentals: INR 200 - 400
+            Sightseeing (museums etc): INR 10 - 50
+             
+            
+            For Mid-range Travellers: INR 1000 to INR 3000 a day
+            
+            Accommodation in mid-range hotels and resorts: INR 600 - 2000
+            Food in mid-range cafes and restaurants: INR 400 - 700
+            Local transport in local taxis or car rentals: INR 400 - 600
+            Snorkelling and Diving packages: INR 1500 and upwards
+             
+            
+            For Luxury Travellers: INR 6000 and upwards
+            
+            Accommodation in 4* or 5* hotels: INR 4000 and upwards
+            Food in upscale restaurants and bars: INR 1000 and upwards
+            Local transport in cabs: INR 400 and upwards
+            Sightseeing of Goa tourism, Guided Tours, Kayaking: INR 1000 and upwards</p>
+        <h1 style="margin-top: 50px;">Top Attractions in Goa</h1>
+        <p>The land of sand, surf, and sunshine has been a favourite among travellers from around the world for quite some time. There is nowhere in India quite like it. Goa tourism is the primary source of income for residents of Goa. Not just domestic tourists, Goa is visited by tourists from all over the world. Since Goa tourism focuses on its pristine beaches, local shacks and delicious cuisine, you’ll find lots of things to keep you busy in Goa. Besides the beaches, you can explore the city’s churches, marvellous forts and museums which equally contribute to the growing popularity of Goa tourism. Good food is another thing that majorly contributed to Goa tourism. The blend of Indian and Portuguese influences is reflected in the architectural marvels of Goa tourism.
+
+ 
+
+ 
+
+            North Goa is the most famous area of Goa tourism. Known for its energetic nightlife, Goan delicacies, flea markets, crowded beaches, and shacks, North Goa tops the list. Apart from the enthusiastic crowd and pretty shacks, North Goa beaches are also famous for different water sports like parasailing, jet skiing, and banana boat rides. North Goa is the happy place of Goa as it offers you a variety of things to do and a lot of different places to see apart from just lazing around the beaches. It offers something for everyone and has been the driving force for Goa tourism.
+            
+             
+            
+            South Goa is the other half of Goa that offers a tranquil atmosphere to its tourists. It is filled with appealing beaches, less crowded than the beaches in North Goa. It is a perfect area for a relaxing vacation. Though South Goa tourism doesn’t offer as much as the places in North Goa do, its calmness and peaceful vibes will make up for everything. South Goa beaches are much whiter and cleaner than the beaches in North Goa and Goa tourism has gradually picked up here. Cotigao wildlife sanctuary, Cabo de Rama Fort and Dudhsagar falls are some of the must-visit places in South Goa.
+            
+             
+            
+            Cola Beach, Baga Beach, Calangute Beach, Betul Beach, Arambol Beach, Basilica of Bom Jesus, Vagator Beach, Fort Aguada, Dudhsagar Falls, Church Square are some of the recommendations by Goa tourism.
+            
+             
+            
+            Read this article for more info on North Goa vs South Goa.</p>
+        <h1 style="margin-top: 50px;">Offbeat Places in Goa</h1>
+        <p>Apart from the stunning beaches, there are a lot of things to see in Goa tourism such as its heritage, sightseeing attractions, nature & parks, dolphin watching tours, architecture & museums, wildlife & bird sanctuaries. These are the major tourist attractions in Goa and the topmost contributors to Goa tourism. Opt for a HOHO tour for a comfortable and enjoyable sightseeing experience of Goa tourism. Make sure you visit the beautiful Chorla Ghats located at the border of Goa, filled with Tropical Forests. The ‘hill station’ feel will definitely make you forget the beaches. Also, explore Querim beach, Bird Sanctuary, Harvalem Falls, Naval Aviation Museum, Museum of Goa, Arvalem Caves, and Our Lady of the Mount are some of the recommendations by Goa tourism.</p>
+        <h1>Best Places to Eat in Goa</h1>
+        <p>One of the most popular elements of Goa tourism is the local cuisine in the state. Try some lip-smacking delicacies at The Black Sheep Bistro, Zaffran, Purple Martini, Martin’s Corner, Antares and Pousada by the Beach.
+
+            Some of the best places to try Goan cuisine are The Fisherman’s Wharf, Kokni Kanteen, Viva Panjim and The Lazy Goose. Don’t forget to have some mouth-licking desserts at Maracas, Porvorim, Iceberg, Margao, Marc Brown Corner, Panjim and Brittos, Baga.
+            
+            </p>
+        <h1 style="margin-top: 50px;">Things to Do in Goa</h1>
+        <p>Listed below are some of the Goa tourism things you can try:
+
+            Enjoy Goa’s nightlife at Tito’s at Baga, Curlies at Anjuna, Brittos at Baga, Thalassa near Vagator Beach, Monkey Valley at Chapora.
+            
+            Experience water sports- Scuba Diving, Parasailing, Jet Skiing, Banana Boat Ride, Snorkeling in Goa.
+            
+             
+            
+            Goa attractions: The efforts of Goa tourism has led to an increasing number of tourists every year who wish to explore the city for its food, beaches, shacks, water sports, forts and flea markets. Contributing to Goa tourism in North Goa are attractions such as Baga Beach, Anjuna Beach, Calangute Beach, Vagator Beach, Fort Aguada and Club LPK whereas major South Goa attractions include Colva Beach, Benaulim Beach, Agonda and Dudhsagar Falls. The main things to do in Goa are water sports, two-wheeler ride, trying your luck at the casinos located on Mandovi River and sightseeing.
+            
+             
+            
+            Goa adventure: One of the main things and the biggest contributor to Goa tourism is water sports. For all the adventure lovers out there, in India, Goa is the best option to experience water sports activities. With beautiful views, plenty of expansive seas with golden sand and fancy shacks, indulge in water sports activities like parasailing, jet skiing, banana boat, scuba diving, snorkelling, and windsurfing on Goa beaches. Other than water sports, Goa also offers many other adventure options like hiking, trekking, crab catching, dolphin spotting, cycling, etc.
+            
+             
+            
+            Goa nightlife: No one should miss Goa’s nightlife. The clubs and shacks here offer live performances and it’s a major draw for tourists from around the world who are contributing to Goa tourism. In fact, nightlife in Goa has played a huge role in making Goa tourism popular among Indian as well as foreign travellers. Party in Goa at these happening places- Curlies, LPK Waterfront, Hill Top, Tito’s lane, SinQ, Bora Bora, Chronicle, La Calypso’s Club Blue, Café Lilliput, Leopard Valley and Shiva Valley. Visit these clubs in a group to make the most of Goa parties.
+            
+             
+            
+            When we talk about nightlife in Goa, the first thing that our mind processes is, partying at the pubs. Yes, it is one of the craziest and happening things to be done in Goa, but you will be surprised to hear that Goa nightlife has much more to offer you. If you want to spend some time under the sky, gazing at the stars with your loved ones, then go camping in floating tents to experience the quieter and calmer environment. Another interesting thing included in Goa tourism is just to have a bonfire with your people on the beaches if you want to avoid loud music. Some of the other options include silent party, theatre shows, Goa on wheels and flea markets.</p>
+
+    </div>
+    <hr>
+    <footer>
+    <div class="logo">
+       <a href="./home.html"> <img src="https://i.ibb.co/NLszsRn/Point-removebg-preview.png" alt="" style="width: 90px;height: 70px;margin-left: 10px;"></a>
+        <p>India's Largest Travel Community</p>
+        <hr>
+        <svg width="40" height="40" class="eastendFooterSocialIcons_listItemSvg" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="20" class="eastendFooter_fill_hover-grey"/>
+            <path fill="#FFFFFF" d="M17.0680736,16.6145435 L17.0680736,14.6052554 C17.0680736,13.7187702 17.0904121,12.3525954 17.7335254,11.5060843 C18.4119099,10.6090177 19.3418964,10 20.9432132,10 C23.5509376,10 24.6490506,10.3715243 24.6490506,10.3715243 L24.132914,13.4342484 C24.132914,13.4342484 23.2711187,13.1861737 22.4669332,13.1861737 C21.6627476,13.1861737 20.9432132,13.4742226 20.9432132,14.2772324 L20.9432132,16.6145435 L24.2399036,16.6145435 L24.0094645,19.6055494 L20.9432132,19.6055494 L20.9432132,30 L17.0680736,30 L17.0680736,19.6055494 L15,19.6055494 L15,16.6145435 L17.0680736,16.6145435 Z" class="eastendFooterSocialIcons_listItemSvgPath-grey"/>
+        </svg>
+        <svg width="40" height="40" class="eastendFooterSocialIcons_listItemSvg" version="1.1" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="20" class="eastendFooter_fill_hover-grey"/>
+            <path fill="#FFFFFF" d="M27.3656846,14.7303293 C28.1998845,14.2311958 28.8399769,13.4385904 29.1415367,12.4969382 C28.3604853,12.9590988 27.4974003,13.2941652 26.5753899,13.4744079 C25.8405546,12.6910456 24.7902946,12.2 23.6279607,12.2 C21.3991912,12.2 19.5909879,14.0093588 19.5909879,16.2392837 C19.5909879,16.5558637 19.6256499,16.8632005 19.694974,17.1589832 C16.3385326,16.9891392 13.3633738,15.3842865 11.3703062,12.9371462 C11.0225303,13.5367995 10.8238013,14.2311958 10.8238013,14.9706528 C10.8238013,16.369844 11.536684,17.607279 12.6204506,18.3317158 C11.9595609,18.3120739 11.3356441,18.1295205 10.7902946,17.8279607 L10.7902946,17.877643 C10.7902946,19.8348931 12.1825534,21.4674754 14.0311958,21.8383593 C13.6926632,21.9331023 13.3356441,21.9804737 12.9670711,21.9804737 C12.7071057,21.9804737 12.4529174,21.9562103 12.2068169,21.9088388 C12.7209705,23.5125361 14.2114385,24.680647 15.9792028,24.7129983 C14.5973426,25.7956095 12.8549971,26.4414789 10.9636049,26.4414789 C10.6377816,26.4414789 10.3154246,26.4229925 10,26.3860196 C11.7874061,27.5310225 13.9110341,28.2 16.1906412,28.2 C23.6198729,28.2 27.6811092,22.0463316 27.6811092,16.7072213 C27.6811092,16.5327556 27.677643,16.3571346 27.6707106,16.1849798 C28.4598498,15.6153668 29.1450029,14.9047949 29.6845754,14.0937031 C28.961294,14.4160601 28.1825534,14.6321202 27.3656846,14.7303293 Z" class="eastendFooterSocialIcons_listItemSvgPath-grey"/>
+        </svg>
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-round-icon.png" alt="" style="width: 43px;height: 43px;display: inline;">
+        <svg width="40" height="40" class="eastendFooterSocialIcons_listItemSvg" version="1.1" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="20" class="eastendFooter_fill_hover-grey"/>
+            <path fill="#FFFFFE" d="M17,23.6363636 L17,16.3636364 L23,20.000139 L17,23.6363636 Z M31.4984545,14.4984516 C31.2224545,13.5149677 30.4091818,12.7405161 29.3766364,12.4776774 C27.5050455,12 20,12 20,12 C20,12 12.4949545,12 10.6233636,12.4776774 C9.59081818,12.7405161 8.77754545,13.5149677 8.50154545,14.4984516 C8,16.2809032 8,20 8,20 C8,20 8,23.7189677 8.50154545,25.5015484 C8.77754545,26.4850323 9.59081818,27.2594839 10.6233636,27.5224516 C12.4949545,28 20,28 20,28 C20,28 27.5050455,28 29.3766364,27.5224516 C30.4091818,27.2594839 31.2224545,26.4850323 31.4984545,25.5015484 C32,23.7189677 32,20 32,20 C32,20 32,16.2809032 31.4984545,14.4984516 Z" class="eastendFooterSocialIcons_listItemSvgPath-grey"/>
+        </svg>
+        <img src="https://fontawesomeicons.com/lib/svg/logo-pinterest.svg" alt="" style="width: 43px;height: 43px;display: inline;">
+    </div>
+    <div class="footer-li">
+        <ul>
+            <li>About Trilioto</li>
+            <li>How It Works</li>    
+            <li>FAQ’s</li>   
+            <li>Privacy Policy</li>    
+            <li>Terms & Conditions</li>    
+            <li>Careers</li>    
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="footer-li">
+        <ul >
+            <li>Product</li>
+            <li>Tour Packages</li> 
+            <li>Travel Guides</li> 
+            <li>Trips & Itineraries</li> 
+            <li>Weekend Getaways</li> 
+            <li>Places to Visit</li> 
+            <li>Other Travel Categories</li>
+            <li>Tripoto Forum</li>
+            <li>Honeymoon Packages</li>
+        </ul>
+    </div>
+    <div class="footer-li">
+        <ul >
+            <li>Important Travel Links</li>
+            <li>Goa Tourism</li>
+            <li>Dubai Tourism</li>
+            <li>Singapore Tourism</li>
+            <li>Kerala Tourism</li>
+            <li>Manali Tourism</li>
+            <li>Bali Tourism</li>
+            <li>Sri Lanka Tourism</li>
+            <li>Honeymoon Destinations In India</li>
+        </ul>
+    </div>
+    <div class="footer-li">
+        <ul >
+            <li>Partner Programs</li>
+            <li>Buy Travel Leads</li>
+            <li>Partner With Us</li>
+            <li>Earn Credits</li>
+            <li>Get Paid To Travel</li>
+            <li>Import Blog To Itinerary</li>
+        </ul>
+    </div>
+</footer>
+<hr style="width: 98%;margin: auto;margin-top: 50px;">
+<p style="text-align: center;margin-bottom: 100px;">© All rights reserved.</p>
+</body>
+</html>

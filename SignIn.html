@@ -96,9 +96,9 @@
 </body>
 <script>
     let accepted = document.getElementById("sign-up-btn")
+    let arr = JSON.parse(localStorage.getItem("login"));
     let myforn = document.getElementById("form");
     accepted.addEventListener("click",()=>{
-        let arr = JSON.parse(localStorage.getItem("login"))
         console.log(arr);
         let obj = {
             "em": myforn.em.value,
@@ -109,7 +109,7 @@
             if(element.email == obj.em && element.password == obj.pass)
             count++;
         });
-        if(count==1){
+        if(count!=0){
             window.location.assign("./home.html")
         }
         else{

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa</title>
+</head>
+<style>
+    #myDiv{
+        background-color: rgb(169, 224, 245);
+        padding-bottom: 0px;
+
+    }
+    #nav{
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+       justify-content: space-between;
+       
+    }
+    input{
+        display:inline-block;
+        margin: auto;
+        width: 65%;
+        height: 50px;
+        margin-bottom: 100px;
+    }
+    #sin:hover{
+        cursor:pointer ;
+    }
+    #nav>ul{
+        margin: 1% 5%;
+        display: inline-flex;
+        gap: 20px;
+    }
+    li{
+        color: rgb(249, 249, 249);
+        display: inline;
+        /* margin: 20px 5px; */
+        font-size: 20px;
+        /* border: 1px solid blueviolet; */
+        text-align: center;
+
+    }
+
+    #inspiration>ul{
+        display: none;
+        position: absolute;
+    }
+    #inspiration:hover ul{
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+    #dropdown>li{
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: 15px;
+        text-align: left;
+    }
+    #dropdown{
+        display: block;
+        position: absolute;
+        width: 200px;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #nav>a>img{
+        /* display: inline; */
+        height: 100px;
+        margin-left: 50px;        
+    }
+    #dest{
+        border-radius: 10px;
+        border: 0px;
+        padding-left: 10px;
+    }
+    #seacrch{
+        width: 70%;
+        margin: auto;
+        margin-bottom: 20px;
+        /* border: 1px solid red; */
+      
+        align-items:flex-end;
+        padding-left: 24%;
+    }
+    #head{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: 50px;
+        /* border: 1px solid red; */
+    }
+    #main{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #pack{
+        padding: 5px 10px;
+        border: 0px;
+        border-radius: 5px;
+        background-color: rgb(169, 224, 245);
+        color: white;
+    }
+    .trip{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .trip>div{
+        border-radius: 5px;
+    }
+    .trip>div:hover{
+        background-color: rgb(170, 170, 242);
+    }
+    .trip img{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .trip>div p{
+        color: rgb(252, 197, 94);
+    }
+    .trip>div p:hover{
+        cursor:pointer;
+    }
+    .footer-li li{
+        color: black;
+        display: block;
+        text-align: left;
+    }
+    footer{
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+        padding-left: 25px;
+    }
+    footer>div{
+        width: 20%;
+        text-align: left;
+    }
+    footer li:nth-child(1){
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .logo{
+        margin-right: 50px;
+    }
+    #sponser{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(122, 134, 244);
+    }
+    #sponser:hover{
+        color: crimson;
+        cursor: pointer;
+    }
+    .sponserImg{
+        margin-bottom: 50px;
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+    #center{
+        width: 100%;
+        margin: auto;
+        border-radius: 5px;
+    }
+    #box-part{
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .box-part-dom{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .box-part-dom img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+    }
+    /* style="display: inline; width: 20px;height: 20px;border: 1px solid red;margin-left: 5px;margin-right: 5px;" */
+    .box-part-dom>div>div img{
+        display: inline;
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .box-part-dom>div>div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .box-part-dom>div>div>div{
+        display: flex;
+        color: rgb(96, 238, 179);
+    }
+    .box-part-dom>div>div>div>h3{
+        margin-top: 0px;
+    }
+    .box-part-dom button{
+        background-color: rgb(96, 238, 179);
+        border: 0px;
+        border-radius: 5px;
+        padding: 0px;
+        width: 80px;
+        height: 30px;
+        color: white;
+        font-size: 900;
+    }
+    .box-part-dom .book{
+        background-color: white;
+        border: 2px solid rgb(96, 238, 179);
+        border-radius: 5px;
+        border-color:rgb(96, 238, 179); 
+        color: rgb(96, 238, 179);
+    }
+    .box-part-dom .book:hover{
+        background-color: rgb(37, 83, 64);
+    }
+
+</style>
+
+<body>
+    <div id="myDiv">   
+        <nav id="nav">
+           <a href="./home.html"> <img src="https://i.ibb.co/NLszsRn/Point-removebg-preview.png" alt="" ></a>
+            <ul>
+                <li  id="inspiration">Inspiration           
+                    <ul id="dropdown">
+                        <li>Visit Singapore</li>
+                        <li>Beaches</li>
+                        <li>Mountains</li>
+                        <li>Heritage</li>
+                        <li>Weekend Guide</li>
+                        <li>Upcoming Festivals</li>
+                        <li>Honeymoon Packages</li>
+                        <li>Wildlife Tourism</li>
+                        <li>Road Trips</li>
+                        <li>Getaways Guide</li>
+                        <li>Luxury Travel</li>
+                    </ul>
+            </li>
+                <li>Forum</li>
+                <li>Packages</li>
+                <li>Public Trip</li>
+                <li onclick="newDoc()" id="sin">Log-Out</li>
+            </ul>
+        </nav>
+        <h1 id="head">India's Largest Community of Travellers</h1>
+        <div id="seacrch">
+        <input type="text" placeholder="Search for itineraries, destinations, hotels or activities" id="dest">
+        <button type="submit" id="destination" style="margin: 6px; padding: 12px; border-radius: 50%;"><img src="https://www.freepnglogos.com/uploads/search-png/search-icon-clip-art-clkerm-vector-clip-art-online-22.png" alt="Search" style="height: 16px; width: 17px;"></butto>   
+    </div>
+    </div>
+    <!-- sponsered -->
+    <a href="" id="sponser">Sponsored</a>
+<img src="https://tpc.googlesyndication.com/simgad/968686610659141041" alt="" class="sponserImg">
+    <!-- main -->
+<div id="main">
+        <h1>Manali Tourism and Travel Guide</h1>
+        <p>The hill station of Manali is a charming town situated in the northern end of Kullu valley with a growing number of tourists contributing to Manali tourism. Manali, Himachal Pradesh once served as the ancient trade route between India and China. Today it is an abode for modern creativity with astounding hills and adventurous activities. While planning a Manali trip, know that this town is a true haven for culture lovers, foodies, adventure junkies, and peace seekers. The high Manali altitude allows you to experience the perfect Himalayan ambience and lets you cruise your way through the snowy roads of the famous Rohtang Pass. There is also a lot to do for people who wish to travel back in time and indulge in the exquisite display of culture and heritage at the Museum of Himachal Culture & Folk Art during their Manali trip. The mighty Himalayas have inspired many foreign settlements here, giving rise to popular European and Israeli cafes, restaurants and hostels, providing one a consortium of around the world cultures. This town is a true haven for adventure junkies who can indulge in river rafting, paragliding, camping, rock climbing, rappelling, zorbing at Solang Valley and Aleo. Manali tourism also has an array of breathtaking treks and sights for its nature lovers, for instance, the Patalsu Peak, the Deo Tibba base camp, Jogini Falls and the Rahala Falls. For all the solo riders out there, cruise your way through the snowy alley of Rohtang Pass while those who wish to travel back in time can indulge in the exquisite display of culture and heritage at the Museum of Himachal Culture and Folk Art. Restaurants and cafes such as the Khyber Pass, Johnson's Cafe, La Plage, Drifters' Inn, The Hangout attract foodies for their culinary justice to everything from Thai to European cuisines and even some live music. If all this is too over the top for you, then reconnect with simplicity at Naggar Village, which is home to waterfalls, a beautiful castle, an art gallery and locals which have many stories to share and a cultural heritage to take pride in. Manali tourism has always been on the higher side because of Manali’s favourable weather conditions and picturesque scenery.</p>
+        <button id="pack">Get Customised Packages</button>
+
+        <!-- Top Attractions -->
+        <h1>Top Attractions</h1>
+        <div class="trip">
+            <!-- 1 -->
+            <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1580218740_solang_valley.jpg" alt="">
+                <h3>Solanga Valley</h3>
+            </div>
+              <!-- 2 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1580218703_nyinmapa_tibetan_buddhist_monastery.jpg" alt="">
+                <h3>Nyinmapa Tibetan Buddhist Monastery</h3>
+            </div>
+              <!-- 3 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1580218782_jogini_falls.jpg" alt="">
+                <h3>Jogini Falls</h3>
+            </div>
+              <!-- 4 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1580218660_hidimba_devi_temple.jpg" alt="">
+                <h3>Hidimab Devi Temple</h3>
+            </div>
+             <!-- 5 -->
+             <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1580218861_vashishtha_temple.jpg" alt="">
+                <h3>Vashishtha Temple</h3>
+            </div>
+              <!-- 6 -->
+              <div>
+                <img src="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1580218890_bhrigu_lake.jpg" alt="">
+                <h3>Bhrigu Lake</h3>
+            </div>
+        </div>
+
+        <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/311219/Image/1669025818_1653304052_web.jpg" alt="" id="center">
+        
+        <!-- box part -->
+<div id="box-part">
+    <h1>Book Budget Tour Packages Curated For You</h1>
+    <div class="box-part-dom">
+     <!-- 1 -->
+ <div>
+     <img src="https://cdn1.tripoto.com/media/filter/tst/img/1691556/Image/1670545068_2.jpg" alt="">
+     <h3>Master Outdoor Survival & Learn Pottery at a Quaint Farmstay in Himachal | Samsara Farmstay, Naggar</h3>
+     <div>
+         <div>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBol6MtR0KM0pTn9qm2lB1sQHNWU_M3s7bqAiacBMw1jgzdgDwKa2HWzkGkaEE869T5w&usqp=CAU" alt="" >
+             <h3>Spiti Valley</h3>
+         </div>
+         
+         <button>3D - 2N</button>
+     </div>
+     <div>
+         <h3>₹9850 <span style="color: rgb(145, 127, 127);">/ person</span></h3>
+         <button class="book">Book Now</button>
+     </div>
+ </div>
+ <!-- 2 -->
+ <div>
+     <img src="https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1670355563_2.jpg" alt="">
+     <h3>Unwind with a Karaoke Session & an Open-Air Movie at This Village-Themed Retreat | a Kasauli Ggaon</h3>
+     <div>
+         <div>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBol6MtR0KM0pTn9qm2lB1sQHNWU_M3s7bqAiacBMw1jgzdgDwKa2HWzkGkaEE869T5w&usqp=CAU" alt="" >
+             <h3>Manali</h3>
+         </div>
+         
+         <button>3D - 2N</button>
+     </div>
+     <div>
+         <h3>₹9850 <span style="color: rgb(145, 127, 127);">/ person</span></h3>
+         <button class="book">Book Now</button>
+     </div>
+ </div>
+ <!-- 3 -->
+ <div>
+     <img src="https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1665556325_8_7.jpg" alt="">
+     <h3>Adventure Walk to Lambi Dehar Mines And Stay In a Cozy Cottage | Seegreen Lodges, Mussoorie</h3>
+     <div>
+         <div>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBol6MtR0KM0pTn9qm2lB1sQHNWU_M3s7bqAiacBMw1jgzdgDwKa2HWzkGkaEE869T5w&usqp=CAU" alt="" >
+             <h3>Spiti Valley</h3>
+         </div>
+         
+         <button>3D - 2N</button>
+     </div>
+     <div>
+         <h3>₹9850 <span style="color: rgb(145, 127, 127);">/ person</span></h3>
+         <button class="book">Book Now</button>
+     </div>
+ </div>
+ <!-- 4 -->
+ <div>
+     <img src="https://cdn1.tripoto.com/media/filter/tst/img/2211564/Image/1654500713_1639555882_8manali_1.jpeg" alt="">
+     <h3>Trek to Triund & Stay at a Maharaja’s Home, Clouds End Villa, Dharamshala</h3>
+     <div>
+         <div>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBol6MtR0KM0pTn9qm2lB1sQHNWU_M3s7bqAiacBMw1jgzdgDwKa2HWzkGkaEE869T5w&usqp=CAU" alt="" >
+             <h3>Manali</h3>
+         </div>
+         
+         <button>3D - 2N</button>
+     </div>
+     <div>
+         <h3>₹9850 <span style="color: rgb(145, 127, 127);">/ person</span></h3>
+         <button class="book">Book Now</button>
+     </div>
+ </div>
+ <!-- 5 -->
+ <div>
+     <img src="https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1649231882_leh2.jpg" alt="">
+     <h3>Learn Surfing & Kayak on the Backwaters of Suvarna at this Beach Paradise|Shaka Surf Club</h3>
+     <div>
+         <div>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBol6MtR0KM0pTn9qm2lB1sQHNWU_M3s7bqAiacBMw1jgzdgDwKa2HWzkGkaEE869T5w&usqp=CAU" alt="" >
+             <h3>Manali</h3>
+         </div>
+         
+         <button>3D - 2N</button>
+     </div>
+     <div>
+         <h3>₹9850 <span style="color: rgb(145, 127, 127);">/ person</span></h3>
+         <button class="book">Book Now</button>
+     </div>
+ </div>
+ <!-- 6 -->
+ <div>
+     <img src="https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1653391344_ln_c1.jpg" alt="">
+     <h3>Hike to Gallu Waterfall & Find the Joy of Doing Nothing | Cosmic Geeks, Dharamkot</h3>
+     <div>
+         <div>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBol6MtR0KM0pTn9qm2lB1sQHNWU_M3s7bqAiacBMw1jgzdgDwKa2HWzkGkaEE869T5w&usqp=CAU" alt="" >
+             <h3>Manali</h3>
+         </div>
+         
+         <button>3D - 2N</button>
+     </div>
+     <div>
+         <h3>₹9850 <span style="color: rgb(145, 127, 127);">/ person</span></h3>
+         <button class="book">Book Now</button>
+     </div>
+ </div>
+ </div>
+ </div>
+ <h1 style="margin-top: 50px;">Best Time to Visit Manali</h1>
+ <p>Best time to visit: Winter is the best season to visit Manali, starting from October to the end of March.
+
+    Peak Season is from March to June when the weather is comfortable and pleasant. Temperature varies between 10°C to 25°C.
+    
+    Shoulder Season: October to February is at its most beautiful. The snow covers the mountains down while the countryside becomes lush green.
+    
+    Off-season: This is the time from July to September when monsoon enters Manali and the prices of the hotels and homestays drop. This is the time to visit Manali if you are looking for some quiet days, away from the touristy crowds. Beware of landslides during this time.     
+ </p>
+
+ <h1 style="margin-top: 50px;">Budget for Manali</h1>
+ <p>For Budget Travellers: INR 800-1200 a day
+
+    Accommodation in hostels and guesthouses: INR 200 - 500 (up to INR 1000 in peak season)
+    Food in street eateries: INR 100 - 300
+    Public Transport in buses and auto rickshaws: INR 50-100
+    Motorbike rentals: INR 200 - 400
+    Sightseeing: INR 10 - 50
+    For Mid-range Travellers: INR 1500 to INR 3000 a day
+    
+    Accommodation in mid-range hotels and resorts: INR 600 - 2000
+    Food in mid-range cafes and restaurants: INR 400 - 700
+    Local transport in local taxis or car rentals: INR 400 - 600
+    Adventurous activities: INR 1500 and upwards
+    For Luxury Travellers: INR 4000 and upwards
+    
+    Accommodation in 4* or 5* hotels: INR 4000 and upwards
+    Food in upscale restaurants and bars: INR 1000 and upwards
+    Local transport in cabs: INR 400 and upwards
+    Sightseeing: INR 1000 and upwards</p>
+
+ <h1 style="margin-top: 50px;">Explore Manali</h1>
+ <p>Suitable for: Family, Friends, Couples and Honeymooners
+
+    Tripoto is the largest community of travellers in the world and has travel information covering all aspects of travel, from hidden destinations to places to see to things to do, there is no end to the amount of information you can get on this travel platform. In fact, most of everything you see has been written by real travellers from around the world. This ensures that the information is authentic and will help you plan a trip and explore Manali tourism.
+    
+     
+    
+    If you’re planning a Manali trip, this travel guide will help you explore some of the most suitable itineraries for Manali and it will also help you in planning and customizing your trip. This Manali tourism guide has been curated to help you find complete information related to Manali tourism. So check out places to see, offbeat locations, hotel and holiday options and a lot more only on Tripoto.
+    
+     
+    
+    Manali tourism is also famous for its pleasant weather, beautiful mountains and attractive scenery. Apart from famous sightseeing places, travellers can indulge in exciting and adventurous snow activities in Manali. Also, don't miss out on Manali’s culture and heritage by visiting ancient monasteries and temples. Don’t forget to enhance your taste buds by having local street-food and exploring cafes with beautiful views during your Manali trip.
+    
+     
+    
+    Manali tourism has always been on the higher side in northern India. Clean roads, attractive greenery, snow-capped mountains, ancient temples and historic monasteries have all contributed to the growth of Manali tourism. Read this travel guide to know about Manali tourism including famous tourist spots and choose the things that you want to do during your trip. Walk around the city to explore local markets and enjoy Manali sightseeing on the way. Explore the city according to your own comfort and choose to get rented bikes as your mode of transport.
+    
+     
+    
+    Visit Gauri Shankar Temple, Hadimba Temple, Krishna Temple and Manu Maharaja Temple to experience the spiritual side of Manali tourism. From positive vibes to beautiful views, these temples will soothe your mind and soul. In case you want to focus more on other things and just want to have a minor sense of religious aspect then visit Hadimba Temple as it is one of the most famous Manali tourist places.
+    
+     
+    
+    Fascinated with tranquil mountains, the noise of flowing water, chirping birds, huge trees? Manali tourism will do the trick, escpecially Old Manali. Just by crossing the bridge over the Manalsu River will make you enter this beautiful paradise. Scenic beauty, bonfire evenings and little cute cafes are a part of this fairytale-like place. 
+    
+     
+    
+    Kullu, Shimla and Kothi are some great places near Manali. Explore these nearby hill stations if you are willing to extend your trip and especially if you are planning your honeymoon in Manali. In case of planning a Manali trip with your loved ones? Check out the itineraries written by real travellers.
+    
+     
+    
+    Manali is famous as a backpacker as well as a honeymoon destination. Manali is known for its snow-capped green hills, local culture, and beautiful cafes. For your Manali trip, choose from a variety of packages like Manali packages from Delhi, Manali tour packages for couples and other such Manali holiday packages. Most of the packages are inclusive of stay, sightseeing, meals, and a tour guide. You can also get a customised package if you have any specific demands. Check out the below packages and send in your details to connect with our travel partner.
+    
+     
+    
+    Check out information based on Manali tourism by fellow travellers. Get authentic information on Manali tourism and reviews from people that have explored and stayed in Manali.
+    
+    </p>
+ <h1 style="margin-top: 50px;">Adventurous Activities in Manali</h1>
+ <p>Manali is a great getaway for all the adventure junkies and backpackers. Plan a Manali trip when the winter skiing festival happens at Solang Valley if you are a ski lover. During other months, you can enjoy paragliding, parachuting and mountaineering. You can also enjoy some of these activities at Rohtang Pass. Wear your sporty attire and explore the exceptional side of Manali tourism. Solang Valley Trek and Beas Kund Trek are among the best places to visit in Manali where you get the finest trekking experience. Manali Snow Trek, Hampta Pass Trek, Bhrigu Lake Trek, and Bara Banghal & Bir Trek make up for Manali sightseeing and adventurous treks.</p>
+
+ <h1 style="margin-top: 50px;">Things to Do in Manali</h1>
+ <p>Places to see in Manali: Manali being one of the important hill stations in North India is famous for its scenic beauty, culture and folk art. With tourism as its main source of income, Manali tourism has flourished in the town. Temples, Monasteries, Museums, Treks, Snow Valleys, Local Markets are some of the main places to see in Manali. A trip is incomplete without having visited Solang Valley and Rohtang Pass.  
+
+    Read uo more about Manali tourism and check places in and around Manali before planning your trip so that you can plan the number of days accordingly. Gulaba is among the gorgeous places near Manali that you should not skip off your list and is often considered to be an alternative to Rohtang Pass. Kothi,  just 14 km away from the crowded Manali city, is next on the list where you can experience old world charm and beauty of nature. You can also choose to explore Jagat Sukh Village if you are a nature lover. This place has old temples and snowy mountains and the beauty of this place doubles during Manali winters. Some other beautiful places to visit near Manali include Great Himalayan National Park, Manikaran, Kasol, Manu Temple, Jagatsukh, Bhrigu Lake, Hampta Pass, Rozy Falls, and Malana.
+    
+    Places to visit: Manali tourism recommends - Solang Valley, Rohtang Pass, Old Manali, Hadimba Temple and Manali Club House
+    
+    Manali tourism recommends: Naggar Castle for architecture and paintings, the Mall Road for local shopping and food, Tibetan Monasteries for culture and heritage, Beas Kund Trek, Vashisht Baths for hot water springs and baths.
+    
+    Things to do during your trip:
+    
+    Adventurous activities: Paragliding in Kullu Manali, Skiing in Manali Solang Nallah, Downhill Cycling in Manali and riding a Yak at Manali Wildlife Sanctuary
+    Religious places: Hadimba Temple, Manikaran Gurudwara and Gauri Shankar Temple
+    Waterfalls: Jogini Waterfall, Jana Waterfall and Zana Waterfall
+    Full-day Manali sightseeing: Religious Sites, Waterfalls, Local Markets and Museums</p>
+ <h1 style="margin-top: 50px;">Stay in Manali</h1>
+ <p>Not just the scenic beauty of the place but convenient and cozy resorts shoot up Manali tourism as well. We bring you the list of hand-picked resorts in Manali for a perfect trip. Consider these options while planning a Manali trip: Span Resort & Spa, White Meadows Manali, Quality Inn River Country Resort, Manuallaya Resort, The Himalayan Resort & Spa, The Orchid Greens and Solang Valley Resort.
+
+    To be in sync with Manali tourism, several hotels have been built in Manali. Some of the best 5-star hotels which make Manali tourism special are Heaven Cottages and Club Mahindra White Meadows Manali. You can also choose from some comfortable 3-star hotels in Manali that include Baragarh Villa, Honeymoon Inn Manali and The Tranquil Inn. Opt for Cheap hotels in Manali like Red House Cafe, Hotel Arohi and Hotel Mountain Inn, if you don't want to spend a lot during your trip.
+    
+    If you don't want to stay in the normal hotels and want to have your own space during your trip then check out the top rated cottages in Manali like Foghill Manali Cottages, Snow Range Resorts & Cottages, Retreat Cottages, Apple Bud Cottages and Sylvan Woods Cottage and Homestay. These cottages will give you a home-like experience and a chance to experience Manali tourism like a local. 
+    
+    Best places to stay in Manali: You can choose to stay either at the Mall road, old Manali, Manali outskirts or Vashisht Village during your Trip. Manali tourism has made it possible for all kinds of travellers to enjoy a comfortable stay in the town. La Ri Sa Resort, Heaven Cottages, Kalista Resort, Vivaan The Sunrise Resort, The Crazy Indian Pad are some of the places in Manali that attract most of Manali tourism.
+    
+    Best resorts in Manali: Kalista Resort, The Holiday Resorts & Cottages, The Anantmaya Resort and Manuallaya The Resort & Spa
+    
+    Best hotels in Manali: WelcomHeritage Urvashi’s Retreat, The Whispering Inn by Vivaan, Baragarh Villa and Hotel Classic
+    
+    Best cottages in Manali: Orchid Nest Cottage, Sunface Homestay, Apple Bud Cottages and Sylvan Woods Cottage & Homestay
+    
+    </p>
+
+</div>
+<hr>
+<footer>
+<div class="logo">
+    <a href="./home.html"> <img src="https://i.ibb.co/NLszsRn/Point-removebg-preview.png" alt="" style="width: 90px;height: 70px;margin-left: 10px;"></a>
+ <p>India's Largest Travel Community</p>
+ <hr>
+ <svg width="40" height="40" class="eastendFooterSocialIcons_listItemSvg" viewBox="0 0 40 40">
+     <circle cx="20" cy="20" r="20" class="eastendFooter_fill_hover-grey"/>
+     <path fill="#FFFFFF" d="M17.0680736,16.6145435 L17.0680736,14.6052554 C17.0680736,13.7187702 17.0904121,12.3525954 17.7335254,11.5060843 C18.4119099,10.6090177 19.3418964,10 20.9432132,10 C23.5509376,10 24.6490506,10.3715243 24.6490506,10.3715243 L24.132914,13.4342484 C24.132914,13.4342484 23.2711187,13.1861737 22.4669332,13.1861737 C21.6627476,13.1861737 20.9432132,13.4742226 20.9432132,14.2772324 L20.9432132,16.6145435 L24.2399036,16.6145435 L24.0094645,19.6055494 L20.9432132,19.6055494 L20.9432132,30 L17.0680736,30 L17.0680736,19.6055494 L15,19.6055494 L15,16.6145435 L17.0680736,16.6145435 Z" class="eastendFooterSocialIcons_listItemSvgPath-grey"/>
+ </svg>
+ <svg width="40" height="40" class="eastendFooterSocialIcons_listItemSvg" version="1.1" viewBox="0 0 40 40">
+     <circle cx="20" cy="20" r="20" class="eastendFooter_fill_hover-grey"/>
+     <path fill="#FFFFFF" d="M27.3656846,14.7303293 C28.1998845,14.2311958 28.8399769,13.4385904 29.1415367,12.4969382 C28.3604853,12.9590988 27.4974003,13.2941652 26.5753899,13.4744079 C25.8405546,12.6910456 24.7902946,12.2 23.6279607,12.2 C21.3991912,12.2 19.5909879,14.0093588 19.5909879,16.2392837 C19.5909879,16.5558637 19.6256499,16.8632005 19.694974,17.1589832 C16.3385326,16.9891392 13.3633738,15.3842865 11.3703062,12.9371462 C11.0225303,13.5367995 10.8238013,14.2311958 10.8238013,14.9706528 C10.8238013,16.369844 11.536684,17.607279 12.6204506,18.3317158 C11.9595609,18.3120739 11.3356441,18.1295205 10.7902946,17.8279607 L10.7902946,17.877643 C10.7902946,19.8348931 12.1825534,21.4674754 14.0311958,21.8383593 C13.6926632,21.9331023 13.3356441,21.9804737 12.9670711,21.9804737 C12.7071057,21.9804737 12.4529174,21.9562103 12.2068169,21.9088388 C12.7209705,23.5125361 14.2114385,24.680647 15.9792028,24.7129983 C14.5973426,25.7956095 12.8549971,26.4414789 10.9636049,26.4414789 C10.6377816,26.4414789 10.3154246,26.4229925 10,26.3860196 C11.7874061,27.5310225 13.9110341,28.2 16.1906412,28.2 C23.6198729,28.2 27.6811092,22.0463316 27.6811092,16.7072213 C27.6811092,16.5327556 27.677643,16.3571346 27.6707106,16.1849798 C28.4598498,15.6153668 29.1450029,14.9047949 29.6845754,14.0937031 C28.961294,14.4160601 28.1825534,14.6321202 27.3656846,14.7303293 Z" class="eastendFooterSocialIcons_listItemSvgPath-grey"/>
+ </svg>
+ <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-round-icon.png" alt="" style="width: 43px;height: 43px;display: inline;">
+ <svg width="40" height="40" class="eastendFooterSocialIcons_listItemSvg" version="1.1" viewBox="0 0 40 40">
+     <circle cx="20" cy="20" r="20" class="eastendFooter_fill_hover-grey"/>
+     <path fill="#FFFFFE" d="M17,23.6363636 L17,16.3636364 L23,20.000139 L17,23.6363636 Z M31.4984545,14.4984516 C31.2224545,13.5149677 30.4091818,12.7405161 29.3766364,12.4776774 C27.5050455,12 20,12 20,12 C20,12 12.4949545,12 10.6233636,12.4776774 C9.59081818,12.7405161 8.77754545,13.5149677 8.50154545,14.4984516 C8,16.2809032 8,20 8,20 C8,20 8,23.7189677 8.50154545,25.5015484 C8.77754545,26.4850323 9.59081818,27.2594839 10.6233636,27.5224516 C12.4949545,28 20,28 20,28 C20,28 27.5050455,28 29.3766364,27.5224516 C30.4091818,27.2594839 31.2224545,26.4850323 31.4984545,25.5015484 C32,23.7189677 32,20 32,20 C32,20 32,16.2809032 31.4984545,14.4984516 Z" class="eastendFooterSocialIcons_listItemSvgPath-grey"/>
+ </svg>
+ <img src="https://fontawesomeicons.com/lib/svg/logo-pinterest.svg" alt="" style="width: 43px;height: 43px;display: inline;">
+</div>
+<div class="footer-li">
+ <ul>
+     <li>About Trilioto</li>
+     <li>How It Works</li>    
+     <li>FAQ’s</li>   
+     <li>Privacy Policy</li>    
+     <li>Terms & Conditions</li>    
+     <li>Careers</li>    
+     <li>Contact Us</li>
+ </ul>
+</div>
+<div class="footer-li">
+ <ul >
+     <li>Product</li>
+     <li>Tour Packages</li> 
+     <li>Travel Guides</li> 
+     <li>Trips & Itineraries</li> 
+     <li>Weekend Getaways</li> 
+     <li>Places to Visit</li> 
+     <li>Other Travel Categories</li>
+     <li>Tripoto Forum</li>
+     <li>Honeymoon Packages</li>
+ </ul>
+</div>
+<div class="footer-li">
+ <ul >
+     <li>Important Travel Links</li>
+     <li>Goa Tourism</li>
+     <li>Dubai Tourism</li>
+     <li>Singapore Tourism</li>
+     <li>Kerala Tourism</li>
+     <li>Manali Tourism</li>
+     <li>Bali Tourism</li>
+     <li>Sri Lanka Tourism</li>
+     <li>Honeymoon Destinations In India</li>
+ </ul>
+</div>
+<div class="footer-li">
+ <ul >
+     <li>Partner Programs</li>
+     <li>Buy Travel Leads</li>
+     <li>Partner With Us</li>
+     <li>Earn Credits</li>
+     <li>Get Paid To Travel</li>
+     <li>Import Blog To Itinerary</li>
+ </ul>
+</div>
+</footer>
+<hr style="width: 98%;margin: auto;margin-top: 50px;">
+<p style="text-align: center;margin-bottom: 100px;">© All rights reserved.</p>
+</div>  
+</body>
+</html>
