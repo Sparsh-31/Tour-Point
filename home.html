@@ -337,13 +337,13 @@
             <li>Forum</li>
             <li>Packages</li>
             <li>Public Trip</li>
-            <li onclick="newDoc()" id="sin">Log-OUt</li>
+            <li onclick="newDoc()" id="sin">Log-Out</li>
         </ul>
     </nav>
     <h1 id="head">India's Largest Community of Travellers</h1>
     <div id="seacrch">
-    <input type="text" placeholder="Search for itineraries, destinations, hotels or activities" >
-    <button type="submit" style="margin: 6px; padding: 12px; border-radius: 50%;"><img src="https://www.freepnglogos.com/uploads/search-png/search-icon-clip-art-clkerm-vector-clip-art-online-22.png" alt="Search" style="height: 16px; width: 17px;"></butto>   
+    <input type="text" placeholder="Search for itineraries, destinations, hotels or activities" id="dest">
+    <button type="submit" id="destination" style="margin: 6px; padding: 12px; border-radius: 50%;"><img src="https://www.freepnglogos.com/uploads/search-png/search-icon-clip-art-clkerm-vector-clip-art-online-22.png" alt="Search" style="height: 16px; width: 17px;"></butto>   
 </div>
 </div>
 
@@ -727,7 +727,16 @@
         }
     },5000)
 
+// search functionality
+let dest = document.getElementById("dest");
+let destination = document.getElementById("destination");
 
+destination.addEventListener("click",()=>{
+    if(dest.value == Goa || dest.value == goa){
+        window.location.assign("/goa.html")
+    }
+})
+// signin pages
 function newDoc() {
   window.location.assign("./SignIn.html")
 }
