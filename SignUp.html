@@ -112,7 +112,8 @@ let btn = document.getElementById("sign-up-btn");
 let arr = [{"email":"kotwanisparsh@gmail.com",
             "password":"12345"}]
     btn.addEventListener("click",()=>{
-        // console.log(myforn.email.value);   
+        // console.log(myforn.email.value);  
+        alert("Created New Account") 
         let obj = {
             "email" : myforn.email.value,
             "password": myforn.pass.value
@@ -120,6 +121,7 @@ let arr = [{"email":"kotwanisparsh@gmail.com",
         arr.push(obj);
         // console.log(arr);
         localStorage.setItem("login",JSON.stringify(arr));
+        window.location.assign("./SignIn.html")
     })
     localStorage.setItem("login",JSON.stringify(arr));
 </script>
