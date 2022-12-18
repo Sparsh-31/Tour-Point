@@ -88,7 +88,7 @@
             <input type="number" class="input-box" placeholder="Phone Number">
             <input type="email" class="input-box" id="email" placeholder="Your Email">
             <input type="password" class="input-box" id="pass" placeholder="Create Password">
-            <input type="password" class="input-box" placeholder="Confirm Password">
+            <input type="password" class="input-box" id="cpass" placeholder="Confirm Password">
             <p><span><input type="checkbox"></span>I agree to the terms of services</p>
             <button type="button" id="sign-up-btn">Sign Up</button>
             <hr>
@@ -109,20 +109,25 @@
 
 let myforn = document.getElementById("form");
 let btn = document.getElementById("sign-up-btn");
-let arr = [{"email":"kotwanisparsh@gmail.com",
-            "password":"12345"}]
-    btn.addEventListener("click",()=>{
-        // console.log(myforn.email.value);  
-        alert("Created New Account") 
+let email = document.getElementById("email");
+let arr = JSON.parse(localStorage.getItem("login"))||[];    
+btn.addEventListener("click",()=>{
+       
         let obj = {
             "email" : myforn.email.value,
-            "password": myforn.pass.value
+            "password": myforn.pass.value,
+            "cpass" : myforn.cpass.value,
         }
         arr.push(obj);
         // console.log(arr);
+        if(myforn.pass.value == myforn.cpass.value){
+        alert("Created New Account") 
         localStorage.setItem("login",JSON.stringify(arr));
         window.location.assign("./SignIn.html")
+        }
+        else{
+            alert("Check Password")
+        }
     })
-    localStorage.setItem("login",JSON.stringify(arr));
 </script>
 </html>
